@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="ad.type" content="landing" />
+    <meta name="ad.vars" content="auto_button=0" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="block-wheel" id="animation_container">
+        <div class="wheel-bg">
+            <img src="/img/landscape-bg.png" alt="">
+        </div>
+        <div class="wheel-header">
+            <svg class="logo" viewBox="0 0 229 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M132.258 15.0001C134.302 6.79224 129.319 0.00012207 117.115 0.00012207H90.6634L80.7529 40.1435L86.5056 50.018H105.323C117.653 50.018 127.205 44.2654 129.66 34.2654C130.896 29.1399 129.463 25.5557 126.237 23.7636V23.6381C129.296 21.6565 131.458 18.5558 132.258 15.0001ZM116.129 33.9428C115.628 36.0396 114.212 38.1901 108.352 38.1901H96.3444L98.4412 29.5879H110.395C116.183 29.57 116.613 31.7743 116.058 33.9428H116.129ZM118.531 15.2689C118.101 16.8818 116.864 18.8532 111.81 18.8532H101.058L102.85 11.8639H113.603C118.71 11.8281 118.961 13.4768 118.531 15.2689Z" fill="#109BF3"/>
+                <path d="M148.907 30.6453H172.994L175.735 18.8173H151.811L153.674 11.8281H177.366L180.108 0.00012207H141.219L128.889 50.0001H172.94L175.825 38.1722H147.133L148.907 30.6453Z" fill="#109BF3"/>
+                <path d="M183.477 0.00012207L180.718 11.8281H195.108L185.664 50.0001H200.771L210.234 11.8281H225.646L228.603 0.00012207H183.477Z" fill="#109BF3"/>
+                <path d="M15.8065 50.0001H0.573479L7.16848 23.2976L8.69179 19.2654L4.65951 23.2976L0.179212 27.8317L0 14.4983L15.8065 0.00012207H28.1184L15.8065 50.0001Z" fill="#FEFFFD"/>
+                <path d="M70.8067 29.2833L65.9501 21.0575L89.5164 0.00012207H67.563L58.6024 8.60227L28.208 36.4697L13.6201 50.0001H34.3908L50.0002 36.0754L55.2511 45.036C57.0432 47.294 59.5701 50.036 70.287 50.036H82.8318L70.8246 29.2654L70.8067 29.2833Z" fill="#FEFFFD"/>
+                <path d="M56.9178 5.84244V5.73491C55.5732 3.85905 53.779 2.35092 51.6998 1.34892C49.6207 0.346924 47.3232 -0.116855 45.0181 0.000142632H28.7994L40.8963 20.5736L56.9178 5.84244Z" fill="#FEFFFD"/>
+            </svg>
+            <a href="/" target="_blank">
+                <span>Go to site</span>
+                <svg viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.3429 1.20069L28.2843 13.1421M28.2843 13.1421L16.3429 25.0835M28.2843 13.1421H0" stroke="white" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="wheel-scene">
+            <div class="wheel-man">
+                <img src="/img/monk.png" alt="">
+            </div>
+            <div class="wheel-center">
+                <div class="wheel-center-bg">
+                    <img src="/img/temple.png" alt="">
+                </div>
+                <div class="wheel">
+                    <img class="wheel-shine" src="/img/shine-mask.png" alt="">
+                    <img class="wheel-inner" src="/img/wheel-inner-singapore.png" alt="">
+                    <img class="wheel-base" src="/img/wheel.png" alt="">
+                    <img class="wheel-dragon" src="/img/dragon-head.png" alt="">
+                    <button class="wheel-btn">
+                        <span>spin</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            <div class="bottom-title">
+                <span><i id="tries-value">2</i> tries</span>
+                Spin the wheel
+            </div>
+            <div class="bottom-annotation">
+                You must be at least 18 years of age or the legal age for gambling in your jurisdiction, whichever is higher, to use the Casino. By using the Casino, you represent and warrant that you are of legal age to form a binding contract with the Casino and meet all other eligibility requirements.
+            </div>
+            <button class="bottom-policy-btn-mobile">policy and conditions</button>
+        </div>
+
+        <!-- <div class="popup popup-active"> -->
+        <div class="popup wheel-popup">
+            <div class="popup-overlay"></div>
+            <div class="popup-body">
+                <div class="popup-close">
+                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L25 25M1 25L25 1" stroke="#817C7C" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="popup-content">
+                    <!-- <div class="popup-stage popup-stage-one popup-stage-active"> -->
+                    <div class="popup-stage popup-stage-one popup-stage-active">
+                        <div class="popup-stage-figure">
+                            <img src="/img/figure-box.png" alt="">
+                        </div>
+                        <div class="popup-stage-text">
+                            <div class="popup-stage-title">
+                                No luck <br>
+                                <br>
+                                One more chance to go! <br>
+                                <br>
+                                1 attempt
+                            </div>
+                            <button class="popup-stage-btn popup-spin-btn">
+                                Spin
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="popup-stage popup-stage-two popup-stage-active"> -->
+                    <div class="popup-stage popup-stage-two">
+                        <div class="popup-stage-figure">
+                            <img src="/img/figure-dragon.png" alt="">
+                        </div>
+                        <div class="popup-stage-text popup-stage-two-text">
+                            <div class="popup-stage-title">
+                                Congratulations <br>
+                                <br>
+                                You won a bonus <br>
+                                <br>
+                                <span>2100 $ + 150 FS</span>
+                            </div>
+                            <a href="/" class="popup-stage-btn" target="_blank">
+                                Get your bonus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup policy-popup-mobile">
+            <div class="popup-overlay"></div>
+            <div class="popup-body">
+                <div class="popup-close">
+                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L25 25M1 25L25 1" stroke="#817C7C" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="popup-content">
+                    <div class="popup-stage popup-stage-active policy-text-mobile">
+                        You must be at least 18 years of age or the legal age for gambling in your jurisdiction, whichever is higher, to use the Casino. By using the Casino, you represent and warrant that you are of legal age to form a binding contract with the Casino and meet all other eligibility requirements.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
