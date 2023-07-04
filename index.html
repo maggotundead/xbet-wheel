@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="ad.type" content="landing" />
+    <meta name="ad.vars" content="auto_button=0" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="block-wheel" id="animation_container">
+        <div class="wheel-bg">
+            <img src="/img/landscape-bg.png" alt="">
+        </div>
+        <div class="wheel-header">
+            <svg class="logo" viewBox="0 0 229 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M132.258 15.0001C134.302 6.79224 129.319 0.00012207 117.115 0.00012207H90.6634L80.7529 40.1435L86.5056 50.018H105.323C117.653 50.018 127.205 44.2654 129.66 34.2654C130.896 29.1399 129.463 25.5557 126.237 23.7636V23.6381C129.296 21.6565 131.458 18.5558 132.258 15.0001ZM116.129 33.9428C115.628 36.0396 114.212 38.1901 108.352 38.1901H96.3444L98.4412 29.5879H110.395C116.183 29.57 116.613 31.7743 116.058 33.9428H116.129ZM118.531 15.2689C118.101 16.8818 116.864 18.8532 111.81 18.8532H101.058L102.85 11.8639H113.603C118.71 11.8281 118.961 13.4768 118.531 15.2689Z" fill="#109BF3"/>
+                <path d="M148.907 30.6453H172.994L175.735 18.8173H151.811L153.674 11.8281H177.366L180.108 0.00012207H141.219L128.889 50.0001H172.94L175.825 38.1722H147.133L148.907 30.6453Z" fill="#109BF3"/>
+                <path d="M183.477 0.00012207L180.718 11.8281H195.108L185.664 50.0001H200.771L210.234 11.8281H225.646L228.603 0.00012207H183.477Z" fill="#109BF3"/>
+                <path d="M15.8065 50.0001H0.573479L7.16848 23.2976L8.69179 19.2654L4.65951 23.2976L0.179212 27.8317L0 14.4983L15.8065 0.00012207H28.1184L15.8065 50.0001Z" fill="#FEFFFD"/>
+                <path d="M70.8067 29.2833L65.9501 21.0575L89.5164 0.00012207H67.563L58.6024 8.60227L28.208 36.4697L13.6201 50.0001H34.3908L50.0002 36.0754L55.2511 45.036C57.0432 47.294 59.5701 50.036 70.287 50.036H82.8318L70.8246 29.2654L70.8067 29.2833Z" fill="#FEFFFD"/>
+                <path d="M56.9178 5.84244V5.73491C55.5732 3.85905 53.779 2.35092 51.6998 1.34892C49.6207 0.346924 47.3232 -0.116855 45.0181 0.000142632H28.7994L40.8963 20.5736L56.9178 5.84244Z" fill="#FEFFFD"/>
+            </svg>
+            <a href="/" target="_blank">
+                <span>Go to site</span>
+                <svg viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.3429 1.20069L28.2843 13.1421M28.2843 13.1421L16.3429 25.0835M28.2843 13.1421H0" stroke="white" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="wheel-scene">
+            <div class="wheel-man">
+                <img src="/img/monk.png" alt="">
+            </div>
+            <div class="wheel-center">
+                <div class="wheel-center-bg">
+                    <img src="/img/temple.png" alt="">
+                </div>
+                <div class="wheel">
+                    <img class="wheel-shine" src="/img/shine-mask.png" alt="">
+                    <img class="wheel-inner" src="/img/wheel-inner.png" alt="">
+                    <img class="wheel-base" src="/img/wheel.png" alt="">
+                    <img class="wheel-dragon" src="/img/dragon-head.png" alt="">
+                    <button class="wheel-btn">
+                        <span>spin</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            <div class="bottom-title">
+                <span><i id="tries-value">2</i> tries</span>
+                Spin the wheel
+            </div>
+            <div class="bottom-annotation">
+                You must be at least 18 years of age or the legal age for gambling in your jurisdiction, whichever is higher, to use the Casino. By using the Casino, you represent and warrant that you are of legal age to form a binding contract with the Casino and meet all other eligibility requirements.
+            </div>
+            <button class="bottom-policy-btn-mobile">policy and conditions</button>
+        </div>
+
+        <!-- <div class="popup popup-active"> -->
+        <div class="popup wheel-popup">
+            <div class="popup-overlay"></div>
+            <div class="popup-body">
+                <div class="popup-close">
+                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L25 25M1 25L25 1" stroke="#817C7C" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="popup-content">
+                    <!-- <div class="popup-stage popup-stage-one popup-stage-active"> -->
+                    <div class="popup-stage popup-stage-one popup-stage-active">
+                        <div class="popup-stage-figure">
+                            <img src="/img/figure-box.png" alt="">
+                        </div>
+                        <div class="popup-stage-text">
+                            <div class="popup-stage-title">
+                                No luck <br>
+                                <br>
+                                One more chance to go! <br>
+                                <br>
+                                1 attempt
+                            </div>
+                            <button class="popup-stage-btn popup-spin-btn">
+                                Spin
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="popup-stage popup-stage-two popup-stage-active"> -->
+                    <div class="popup-stage popup-stage-two">
+                        <div class="popup-stage-figure">
+                            <img src="/img/figure-dragon.png" alt="">
+                        </div>
+                        <div class="popup-stage-text popup-stage-two-text">
+                            <div class="popup-stage-title">
+                                Congratulations <br>
+                                <br>
+                                You won a bonus <br>
+                                <br>
+                                <span>86000 ₱ + 150 FS</span>
+                            </div>
+                            <a href="/" class="popup-stage-btn" target="_blank">
+                                Get your bonus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup policy-popup-mobile">
+            <div class="popup-overlay"></div>
+            <div class="popup-body">
+                <div class="popup-close">
+                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L25 25M1 25L25 1" stroke="#817C7C" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="popup-content">
+                    <div class="popup-stage popup-stage-active policy-text-mobile">
+                        You must be at least 18 years of age or the legal age for gambling in your jurisdiction, whichever is higher, to use the Casino. By using the Casino, you represent and warrant that you are of legal age to form a binding contract with the Casino and meet all other eligibility requirements.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        :root {
+            --blue: #0075FF;
+            --blue-dark: #1E2158;
+            --green: #76A70F;
+            --red: #ff0000;
+
+            --popup-bg-color: var(--blue-dark);
+            --popup-btn-bg-color: var(--green);
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .block-wheel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            font-family: 'Montserrat', sans-serif;
+            /* background: url('landscape-bg.png') lightgray 0px 0px / 100% 169.63% no-repeat; */
+            color: #fff;
+        }
+        .block-wheel img {
+            display: block;
+            /* max-width: 100%; */
+        }
+        .wheel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            /* display: none; */
+        }
+        .wheel-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* header */
+        .wheel-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            /* padding: 95px 50px 0; */
+            padding-top: clamp(18px, 4.95vw, 95px);
+            padding-left: clamp(20px, 2.6vw, 50px);
+            padding-right: clamp(20px, 2.6vw, 50px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 5;
+        }
+        .wheel-header .logo {
+            /* width: 229px; */
+            width: clamp(115px, 11.92vw, 229px);
+            /* height: 50px; */
+            height: (25px, 2.6vw, 50px);
+        }
+        .wheel-header a {
+            display: flex;
+            align-items: center;
+            /* font-size: 20px; */
+            font-size: clamp(10px, 1.04vw, 20px);
+            font-weight: 600;
+            line-height: 1.4;
+            color: #fff;
+            text-decoration: none;
+        }
+        .wheel-header a span {
+            /* margin-right: 20px; */
+            margin-right: clamp(10px, 1.04vw, 20px);
+            white-space: nowrap;
+        }
+        .wheel-header a svg {
+            transition: .3s;
+            /* width: 30px; */
+            width: clamp(16px, 1.5625vw, 30px);
+            /* height: 26px; */
+            height: clamp(14px, 1.354vw, 26px);
+
+        }
+        .wheel-header a:hover svg {
+            transform: translateX(16px);
+        }
+
+        /* scene */
+        .wheel-scene {
+            display: flex;
+            justify-content: center;
+        }
+        .wheel-man {
+            position: absolute;
+            left: 0;
+            /* bottom: 100px; */
+            bottom: clamp(80px, 5.2vw, 100px);
+            z-index: 4;
+            width: 100%;
+            /* max-width: 432px; */
+            max-width: clamp(240px, 22.4vw, 432px);
+        }
+        .wheel-man img {
+            width: 100%;
+        }
+        .wheel-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            z-index: 3;
+        }
+        .wheel-center-bg {
+            /* width: 85.9375vw; */
+            width: clamp(860px, 85.9375vw, 2560px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .wheel-center-bg img {
+            width: 100%;
+        }
+
+        /* wheel */
+        .wheel {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            width: clamp(500px, 52.135vw, 1000px);
+        }
+        .wheel-shine,
+        .wheel-inner,
+        .wheel-dragon {
+            position: absolute;
+        }
+        .wheel-inner,
+        .wheel-inner,
+        .wheel-shine {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .wheel-shine {
+            width: 120%;
+            z-index: 1;
+        }
+        .wheel-inner {
+            width: 62%;
+            z-index: 2;
+        }
+        .wheel-inner.lose {
+            animation: 3s wheel-lose-animation ease-in-out forwards;
+        }
+        .wheel-inner.win {
+            animation: 3s wheel-win-animation ease-in-out forwards;
+        }
+        @keyframes wheel-lose-animation {
+            0% {
+                transform: translate(-50%,-50%) rotate(0);
+            }
+
+            to {
+                transform: translate(-50%,-50%) rotate(4.3125turn);
+            }
+        }
+        @keyframes wheel-win-animation {
+            0% {
+                transform: translate(-50%,-50%) rotate(4.3125turn);
+            }
+
+            to {
+                transform: translate(-50%,-50%) rotate(10.9375turn);
+            }
+        }
+
+        .wheel-base {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+        .wheel-dragon {
+            width: 21%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+        .wheel-btn {
+            width: 14.6%;
+            height: 14.6%;
+            border-radius: 50%;
+            border: 0;
+            background-color: transparent;
+            background: linear-gradient(180deg, #111324 0%, #81D1C1 33.33%, #013C81 59.90%, #171B41 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* font-size: 35px; */
+            font-size: clamp(18px, 1.83vw, 35px);
+            font-weight: 800;
+            font-style: italic;
+            line-height: 1.2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            text-transform: uppercase;
+            cursor: pointer;
+
+        }
+        .wheel-btn.disabled {
+            cursor: not-allowed;
+        }
+        .wheel-btn span {
+            transition: .3s;
+            padding-right: 4px;
+            /* overflow: hidden; */
+            position: relative;
+        }
+        .wheel-btn:not(.disabled) span {
+            /* animation: button-spin-zoom 3s linear, button-blink-animation 3s linear infinite; */
+            animation: button-blink-animation 3s linear infinite;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .wheel-btn:not(.disabled):hover span {
+                transform: rotate(360deg);
+                animation: initial;
+            }
+        }
+
+        @keyframes button-spin-zoom {
+            0% {
+                transform: scale(1) rotate(0);
+            }
+            25% {
+                transform: scale(0.8) rotate(0);
+            }
+            50% {
+                transform: scale(1.2) rotate(0);
+            }
+            75% {
+                transform: scale(1) rotate(360deg);
+            }
+            100% {
+                transform: scale(1) rotate(0);
+            }
+        }
+        @keyframes button-blink-animation {
+            0% {
+                text-shadow: 0 0 10px #03bcf4,
+                0 -2px 20px #03bcf4,
+                0 -4px 40px #03bcf4,
+                0 -8px 80px #03bcf4,
+                0 -16px 160px #03bcf4,
+                0 -32px 320px #03bcf4,
+                0 -64px 640px #03bcf4;
+            }
+            5% {
+                text-shadow: 0 0 1px #fff;
+            }
+            80% {
+                text-shadow: 0 0 1px #fff;
+            }
+            85% {
+                text-shadow: 0 0 10px #03bcf4,
+                0 -2px 20px #03bcf4,
+                0 -4px 40px #03bcf4,
+                0 -8px 80px #03bcf4,
+                0 -16px 160px #03bcf4,
+                0 -32px 320px #03bcf4,
+                0 -64px 640px #03bcf4;
+            }
+            95% {
+                text-shadow: 0 0 1px #fff;
+            }
+            100% {
+                text-shadow: 0 0 10px #03bcf4,
+                0 -2px 20px #03bcf4,
+                0 -4px 40px #03bcf4,
+                0 -8px 80px #03bcf4,
+                0 -16px 160px #03bcf4,
+                0 -32px 320px #03bcf4,
+                0 -64px 640px #03bcf4;
+            }
+        }
+
+        /* bottom text */
+        .bottom-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* padding: 0 48px 32px; */
+            padding-left: clamp(20px, 1.66vw, 32px);
+            padding-right: clamp(20px, 1.66vw, 32px);
+            padding-bottom: clamp(20px, 2.5vw, 48px);
+            z-index: 5;
+        }
+        .bottom-title {
+            text-align: right;
+            leading-trim: both;
+            text-edge: cap;
+            /* font-size: 60px; */
+            font-size: clamp(32px, 3.125vw, 60px);
+            /* line-height: 1.2; */
+            /* line-height: 50px; */
+            line-height: .833;
+            font-style: italic;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .bottom-title span {
+            color: #0075FF;
+            /* font-size: 36px; */
+            font-size: clamp(32px, 1.875vw, 36px);
+            display: block;
+            /* margin-bottom: 20px; */
+            margin-bottom: clamp(18px, 1.04vw, 20px);
+            /* line-height: 25px; */
+            line-height: .6944;
+        }
+        .bottom-annotation {
+            /* margin-top: 58px; */
+            margin-top: clamp(29px, 1.51vw, 58px);
+            /* font-size: 20px; */
+            /* font-size: clamp(13px, 1.04vw, 20px); */
+            font-size: clamp(10px, 1.04vw, 20px);
+            font-weight: 400;
+            line-height: 1.5;
+            opacity: .5;
+        }
+        .bottom-policy-btn-mobile {
+            margin-top: clamp(24px, 8vw, 48px);
+            display: none;
+            font-size: clamp(13px, 3.46vw, 18px);
+            line-height: 1.5;
+            color: rgba(245, 245, 245, .5);
+            text-decoration: underline;
+            border: 0;
+            background-color: transparent;
+        }
+
+        /* popup */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transform: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+        .popup-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .popup-overlay {
+            background-color: rgba(16, 155, 243, 0.1);
+            backdrop-filter: blur(4px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .popup-body {
+            width: clamp(306px, 41.66vw, 800px);
+            /* height: 400px; */
+            border-radius: 50px;
+            background-color: var(--popup-bg-color);
+            position: relative;
+            z-index: 2;
+        }
+        .popup-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+        .popup-close svg {
+            width: 26px;
+            height: 26px;
+            display: block;
+        }
+        .popup-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        .popup-stage {
+            display: none;
+            /* align-items: center; */
+            width: 100%;
+            padding: clamp(36px, 3.90625vw, 75px) clamp(20px, 2.6vw, 50px);
+        }
+        .popup-stage-active {
+            display: flex;
+        }
+        .popup-stage-one {
+            align-items: center;
+            justify-content: space-around;
+        }
+        .popup-stage-two {
+            align-items: flex-start;
+        }
+        .popup-stage-figure {
+            max-width: clamp(120px, 13.02vw, 250px);
+        }
+        .popup-stage-figure img {
+            width: 100%;
+        }
+        .popup-stage-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .popup-stage-two-text {
+            flex-grow: 1;
+        }
+        .popup-stage-title {
+            font-size: clamp(18px, 1.04vw, 20px);
+            /* line-height: 2.075; */
+            line-height: 1.2;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .popup-stage-title span {
+            font-size: clamp(25px, 1.40625vw, 27px);
+            color: var(--red);
+            display: block;
+        }
+        .popup-stage-btn {
+            margin-top: clamp(38px, 2.29vw, 44px);
+            padding-left: clamp(32px, 2.083vw, 40px);
+            padding-right: clamp(32px, 2.083vw, 40px);
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0px 10px 8px 0px rgba(2, 15, 24, 0.20);
+            background-color: var(--popup-btn-bg-color);
+            border: 0;
+            border-radius: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            min-width: 202px;
+        }
+
+        @media (max-width: 767px) {
+
+            .wheel-man {
+                display: none;
+            }
+
+            .bottom-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .bottom-title {
+                text-align: center;
+            }
+            .bottom-annotation {
+                /* text-align: center; */
+                /* line-height: 1.4; */
+                display: none;
+            }
+            .bottom-policy-btn-mobile {
+                display: block;
+            }
+            .policy-popup-mobile .popup-body {
+                border-radius: 24px;
+            }
+            .policy-popup-mobile .popup-close {
+                display: block;
+                right: 12px;
+                top: 12px;
+            }
+            .policy-popup-mobile .popup-close svg {
+                width: 20px;
+                height: 20px;
+            }
+            .popup-close {
+                display: none;
+            }
+            .popup-stage {
+                flex-direction: column;
+            }
+            .popup-stage-two {
+                align-items: center;
+            }
+            .popup-stage-text {
+                margin-top: 36px;
+            }
+            /* .popup-stage-btn {
+                width: 100%;
+            } */
+        }
+    </style>
+
+    <script>
+        const wheelBlock = document.querySelector('.block-wheel');
+        const triesTextVal = document.getElementById('tries-value');
+
+        const wheel = wheelBlock.querySelector('.wheel');
+        const wheelBtn = wheel.querySelector('.wheel-btn');
+        const wheelCircle = wheel.querySelector('.wheel-inner');
+
+        let winState = false; //lose first
+
+        const popup = wheelBlock.querySelector('.wheel-popup');
+        const popupClose = popup.querySelector('.popup-close');
+        const popupOverlay = popup.querySelector('.popup-overlay');
+        const popupStageOne = popup.querySelector('.popup-stage-one');
+        const popupStageTwo = popup.querySelector('.popup-stage-two');
+        const popupSpinBtn = popup.querySelector('.popup-spin-btn');
+        const popupAppearanceTime = 3500;
+
+        const winHandlerFunc = () => {
+            winState = true;
+            wheelCircle.classList.remove('lose');
+            wheelCircle.classList.add('win');
+
+            setTimeout(() => {
+                wheelBtn.classList.add('disabled');
+
+                popupStageOne.classList.remove('popup-stage-active');
+                popupStageTwo.classList.add('popup-stage-active');
+                popup.classList.add('popup-active');
+                triesTextVal.textContent = '0';
+            }, popupAppearanceTime);
+
+        };
+
+        wheelBtn.addEventListener('click', () => {
+            if (!winState) {
+                winState = true;
+                wheelCircle.classList.add('lose');
+
+                setTimeout(() => {
+                    popup.classList.add('popup-active');
+                    triesTextVal.textContent = '1';
+                }, popupAppearanceTime);
+
+            }
+            else {
+                winHandlerFunc();
+            }
+        });
+
+        popupSpinBtn.addEventListener('click', () => {
+            popup.classList.remove('popup-active');
+            winHandlerFunc();
+        });
+
+        popupClose.addEventListener('click', () => popup.classList.remove('popup-active'));
+        // popupOverlay.addEventListener('click', () => popup.classList.remove('popup-active'));
+
+        const policyBtnMobile = wheelBlock.querySelector('.bottom-policy-btn-mobile');
+        const policyPopupMobile = wheelBlock.querySelector('.policy-popup-mobile');
+        const policyPopupMobileClose = policyPopupMobile.querySelector('.popup-close');
+        const policyPopupMobileOverlay = policyPopupMobile.querySelector('.popup-overlay');
+
+        policyBtnMobile.addEventListener('click', () => policyPopupMobile.classList.add('popup-active'));
+        policyPopupMobileClose.addEventListener('click', () => policyPopupMobile.classList.remove('popup-active'));
+        policyPopupMobileOverlay.addEventListener('click', () => policyPopupMobile.classList.remove('popup-active'));
+
+        // clickable
+        const localClickTag = "https://1xbet.com/";
+
+        function makeClickable(selector) {
+            let clickURL = localClickTag;
+
+            if (window.clickTag && typeof window.clickTag === "string" && window.clickTag.length > 5) {
+                clickURL = window.clickTag;
+            } else {
+
+                const params = new Proxy(new URLSearchParams(window.location.search), {
+                    get: (searchParams, prop) => searchParams.get(prop),
+                });
+
+                if (params.clickTag) {
+                    clickURL = params.clickTag;
+                } else {
+
+                    if (window.location.search.startsWith("?url=")) {
+                        let cTag = window.location.search.replace("?url=", "");
+                        if (cTag) {
+                            clickURL = cTag;
+                        }
+                    }
+                }
+            }
+
+            let globalClickArea = document.querySelector("#global-click-area");
+
+            if (!globalClickArea) {
+
+            globalClickArea = document.createElement("a");
+            globalClickArea.id = "global-click-area";
+            globalClickArea.setAttribute("target", "_blank");
+            globalClickArea.setAttribute("href", clickURL);
+            globalClickArea.style.cssText = "position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -1;";
+            document.querySelector("#animation_container").prepend(globalClickArea);
+
+            } else {
+                // Already added
+                if (globalClickArea.getAttribute("href").toLocaleLowerCase() != clickURL.toLowerCase()) {
+                    // clickURL changed? Something strange...
+                    // NO WAY!
+                    return;
+                }
+            }
+
+            document.querySelectorAll(selector).forEach((element) => {
+                if (element.tagName.toLowerCase() === "a") {
+                    element.setAttribute("draggable", false);
+                    element.setAttribute("target", "_blank");
+                    element.setAttribute("href", clickURL);
+                    console.log(element);
+                } else {
+                    element.onclick = (e) => {
+                    e.stopPropagation();
+                    globalClickArea.click();
+                    };
+                }
+            });
+        }
+        makeClickable('.block-wheel a');
+    </script>
+</body>
+</html>
